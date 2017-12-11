@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Profile page</title>
+    <% include partial/head %>    
 </head>
 <body>
-    <h1>Welcome</h1>
+    <div class="container">
+        <header class="text-center">
+            <h1>Profile page</h1>
+            <a href="/logout" class="btn btn-light btn-sm">Logout</a>
+        </header>
+        <hr>
+        <div class="container">
+            <div class="col-sm-6 mx-auto">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">
+                            <span class="fa fa-user"></span> Local
+                        </h3>
+                        <p>
+                            <strong>ID: </strong><%= user._id %> <br>
+                            <strong>Email: </strong><%= user.local.email %> <br>
+                            <strong>Password: </strong><%= user.local.password %> <br>
+                        </p>
+                        <a href="/logout" class="btn btn-light">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
